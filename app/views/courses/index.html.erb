@@ -1,1 +1,17 @@
 <h1>Welcome to The Homepage</h1>
+<h3>courses#index</h3>
+
+<div class="courses">
+	<div class="container">
+		<% @courses.each do |course| %>
+			<div class="course">
+				<%= "#{course.subject} #{course.number} - #{course.section}" %><br>
+				<%= "#{course.name} - #{course.instructor}" %><br>
+				<%= "#{course.semester} - #{course.year}" %>
+			</div>
+		<% end %>
+
+		<%= link_to 'Add Course', new_course_path %>
+	</div>
+</div>
+

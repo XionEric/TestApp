@@ -1,0 +1,24 @@
+<h1>Courses#new</h1>
+
+<div class="courseForm">
+	<h3>Add Course</h3>
+	<div class="container">
+
+		<%= form_for @course do |f| %>
+			<div class="information">
+				<%= f.text_field :subject, :placeholder => "Subject" %><br>
+				<%= f.number_field :number, :placeholder => "Course Number" %><br>
+				<%= f.number_field :section, :placeholder => "Section Number" %><br>
+				<%= f.text_field :name, :placeholder => "Name" %><br>
+				<%= f.text_field :instructor, :placeholder => "Instructor" %><br>
+				<%= f.text_field :semester, :placeholder => "Semester" %><br>
+				<%= f.number_field :year, :placeholder => "Year" %>
+			</div>
+
+			<div class="submit">
+				<%= f.submit "Enter" %>
+			</div>
+
+		<% end %>
+	</div>
+</div>
