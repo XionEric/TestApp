@@ -1,0 +1,13 @@
+<h1>courses#show</h1>
+
+<div class="course">
+	<h3><%= "#{@course.subject}  #{@course.number} - #{@course.section}" %></h3>
+	
+	<div class="information">
+		<%= "#{@course.name}" %><br>
+		<%= "Instructor: #{@course.instructor}" %><br>
+		<%= "#{@course.semester} - #{@course.year}" %>
+	</div>
+
+	<%= link_to 'Back', courses_path %>
+</div>

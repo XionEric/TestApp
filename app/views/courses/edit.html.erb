@@ -1,0 +1,25 @@
+<h1>courses#edit</h1>
+
+<div class="course">
+	<h3>Update Course</h3>
+
+	<div class="container">
+		<%= form_for ( @course )  do |f| %>
+		
+		<div class="information">
+				<%= f.text_field :subject %><br>
+				<%= f.number_field :number %><br>
+				<%= f.number_field :section %><br>
+				<%= f.text_field :name %><br>
+				<%= f.text_field :instructor %><br>
+				<%= f.text_field :semester %><br>
+				<%= f.number_field :year %>
+		</div>
+		<div class="submit">
+			<%= f.submit "Update" %>
+		</div>
+		<%= link_to 'Back', courses_path %>
+
+		<% end %>
+	</div>
+</div>

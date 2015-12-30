@@ -1,8 +1,15 @@
 Rails.application.routes.draw do
 
-	get 'courses'=> 'courses#index'
-  get 'courses/new' => 'courses#new', as: :new_course
-  post 'courses' => 'courses#create'
+  root 'courses#index'
+
+  resources :courses
+
+	#get 'courses'=> 'courses#index'
+  #get 'courses/new' => 'courses#new', as: :new_course
+  #post 'courses' => 'courses#create'
+  #get 'courses/:id' => 'courses#show', as: :show_course
+  #get 'courses/:id/edit' => 'courses#edit', as: :edit
+  #patch 'courses/:id' => 'courses#update'
 
 
 

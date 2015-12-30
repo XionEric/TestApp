@@ -2,16 +2,16 @@
 <h3>courses#index</h3>
 
 <div class="courses">
-	<div class="container">
 		<% @courses.each do |course| %>
-			<div class="course">
+			<div class="container">
 				<%= "#{course.subject} #{course.number} - #{course.section}" %><br>
 				<%= "#{course.name} - #{course.instructor}" %><br>
 				<%= "#{course.semester} - #{course.year}" %>
 			</div>
+			<%= link_to 'View', course_path(course) %>
+			<%= link_to 'Edit', edit_course_path(course) %>
+			<%= link_to 'Delete', course_path(course), method: :delete, data: { confirm: 'Are you sure?'} %>
+			<br><br>
 		<% end %>
-
-		<%= link_to 'Add Course', new_course_path %>
-	</div>
 </div>
-
+<%= link_to 'Add Course', new_course_path %>	
