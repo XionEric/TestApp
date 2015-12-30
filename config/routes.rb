@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
 
-  root 'courses#index'
+  root 'users#new'
+
 
   resources :courses
+  resources :users
 
 	#get 'courses'=> 'courses#index'
   #get 'courses/new' => 'courses#new', as: :new_course

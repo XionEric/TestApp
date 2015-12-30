@@ -39,7 +39,7 @@ class CoursesController < ApplicationController
 		@course = Course.find(params[:id])
 		@course.destroy
 
-		redirect_to courses_path
+		redirect_to courses_path	
 	end
 
 	private
