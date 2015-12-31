@@ -1,5 +1,8 @@
 class CoursesController < ApplicationController
 	
+	before_action :require_user, only:[:show]
+	before_action :require_editor, only:[:edit]
+
 	def index
 		@courses = Course.all
 	end

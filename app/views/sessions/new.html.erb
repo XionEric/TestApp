@@ -1,0 +1,23 @@
+<h1>sessions#login</h1>
+
+<div class="login">
+	<div class="form">
+
+	<h3>Log In</h3>
+
+		<%= form_for(:session, url: login_path) do |f| %>
+		<div class="container">
+			<%= f.email_field :email, :placeholder => "Email Address" %><br>
+			<%= f.password_field :password, :placeholder => "Password" %><br>
+			<%= f.submit 'Log In' %>
+		</div>
+		<% end %>
+
+	</div>
+</div>
+
+<div class="container">
+	<%= link_to 'Courses', courses_path %>
+	<%= link_to 'Sign Up', signup_path %>
+</div>
+
