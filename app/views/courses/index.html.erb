@@ -1,4 +1,4 @@
-<h1>Welcome to The Homepage</h1>
+<h1>Courses</h1>
 <h3>courses#index</h3>
 
 <div class="courses">
@@ -7,20 +7,14 @@
 				<%= "#{course.subject} #{course.number} - #{course.section}" %><br>
 				<%= "#{course.name} - #{course.instructor}" %><br>
 				<%= "#{course.semester} - #{course.year}" %>
+				<%= link_to 'View', course_path(course) %>
+				<%= link_to 'Edit', edit_course_path(course) %>
+				<%= link_to 'Delete', course_path(course), method: :delete, data: { confirm: 'Are you sure?'} %>
 			</div>
-			<%= link_to 'View', course_path(course) %>
-			<%= link_to 'Edit', edit_course_path(course) %>
-			<%= link_to 'Delete', course_path(course), method: :delete, data: { confirm: 'Are you sure?'} %>
 			<br><br>
 		<% end %>
 </div>
-<%= link_to 'Add Course', new_course_path %>
 
 <div class="container">
-	<% if current_user %>
-		<%= link_to 'Logout', logout_path, method: "delete" %>
-	<% else %>
-		<%= link_to 'Login In', login_path %>
-		<%= link_to 'Sign Up', signup_path %>
-	<% end %>
+	<%= link_to 'Add Course', new_course_path %>
 </div>

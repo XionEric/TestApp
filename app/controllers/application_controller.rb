@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
  end
 
  def require_editor
- 	redirect_to courses_path unless current_user.editor?
+ 	redirect_to '/login	' unless current_user && current_user.editor?
  end
 
 end
