@@ -6,8 +6,10 @@ Rails.application.routes.draw do
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
 
+  resources :categories
   resources :courses
   resources :users
+  resources :branchs
 
 	#get 'courses'=> 'courses#index'
   #get 'courses/new' => 'courses#new', as: :new_course

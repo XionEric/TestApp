@@ -1,6 +1,24 @@
 Rails.application.routes.draw do
 
-	get '/'=> 'courses#index', as 'Homepage'
+  root 'sessions#new'
+  get 'signup' => 'users#new'
+  get 'login' => 'sessions#new'
+  post 'login' => 'sessions#create'
+  delete 'logout' => 'sessions#destroy'
+
+  resources :courses
+  resources :users
+  resources :branchs
+  resources :categorys
+
+	#get 'courses'=> 'courses#index'
+  #get 'courses/new' => 'courses#new', as: :new_course
+  #post 'courses' => 'courses#create'
+  #get 'courses/:id' => 'courses#show', as: :show_course
+  #get 'courses/:id/edit' => 'courses#edit', as: :edit
+  #patch 'courses/:id' => 'courses#update'
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

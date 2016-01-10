@@ -1,0 +1,15 @@
+<h1>categorys#signup</h1>
+
+	<div class="form">
+
+	<h3>Create New Category</h3>
+
+		<%= form_for @category do |f| %>
+			<div class="container">
+				<%= f.text_field :name, :placeholder => "Name" %><br>
+				<%= f.text_field :image, :placeholder => "Image Link" %><br>
+				<%= f.submit 'Submit' %>
+			</div>
+		<% end %>	
+
+	</div>
